@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lesson_1</string>
+    <string name="game_is_finished_you_won">The game is Finished! \n YOU WON!!!</string>
+</resources>
