@@ -12,30 +12,24 @@ import java.util.List;
 
 public class EmojiGame {
     private final Game<String> game;
-    private Context context;
+    private final Context context;
 
     public EmojiGame(Context context) {
         this.context = context;
-       // game = new Game<>(List.of("🐶", "🐱", "🐼", "🐸", "🐵", "🐤", "🦄"));
-        game = new Game<>(List.of("🐶", "🐱"));
+        game = new Game<>(List.of("🐶", "🐱", "🐼"));
 
     }
 
     public void choose(Card<String> card) {
         game.choose(card);
         if (game.isGameFinished()) {
-            //Toast.makeText(context, "GAME IS FINISHED", Toast.LENGTH_LONG ).show();
             message();
         }
     }
 
-    private AlertDialog message() {
-
+    private void message() {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        return  builder
-                .setView(R.layout.dialog)
-                .show();
-
+        builder.setView(R.layout.dialog).show();
     }
 
     public List<Card<String>> getCards() {

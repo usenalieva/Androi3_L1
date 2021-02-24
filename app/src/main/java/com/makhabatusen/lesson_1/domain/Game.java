@@ -34,7 +34,6 @@ public class Game<Content> {
         checkPairs(card);
         remove();
         gameFinished();
-
     }
 
 
@@ -57,16 +56,13 @@ public class Game<Content> {
                     card.setFaceUp(false);
                     anotherCard.setFaceUp(false);
                     Log.e("ololo", "FACE DOWN!");
-
                 }
             }
         }
     }
 
-
     private void remove() {
         List<Card<Content>> resultCards = new ArrayList<>(cards);
-
         for (Card<Content> c : cards) {
             if (c.isMatched())
                 resultCards.remove(c);
@@ -75,9 +71,7 @@ public class Game<Content> {
         cards.addAll(resultCards);
     }
 
-
     public List<Card<Content>> getCards() {
         return cards;
     }
-
 }
