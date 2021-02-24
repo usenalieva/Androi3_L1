@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.makhabatusen.lesson_1.R;
-import com.makhabatusen.lesson_1.domain.Card;
 import com.makhabatusen.lesson_1.ui.adapter.EmojiAdapter;
 
 public class MainActivity extends AppCompatActivity implements EmojiAdapter.Listener {
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements EmojiAdapter.List
     }
 
     @Override
-    public void cardClick(Card<String> card) {
+    public void cardClick() {
       //  Log.e("ololo", String.valueOf(card.getId()));
         emojiAdapter.notifyDataSetChanged();
     }
