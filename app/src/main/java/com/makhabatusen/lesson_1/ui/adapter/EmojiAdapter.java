@@ -16,10 +16,8 @@ import com.makhabatusen.lesson_1.ui.EmojiGame;
 public class EmojiAdapter extends RecyclerView.Adapter<EmojiAdapter.EmojiHolder> {
 
     private final EmojiGame emojiGame;
-    private final Listener listener;
 
-    public EmojiAdapter (Listener listener, EmojiGame emojiGame) {
-        this.listener = listener;
+    public EmojiAdapter (EmojiGame emojiGame) {
         this.emojiGame = emojiGame;
     }
 
@@ -62,13 +60,9 @@ public class EmojiAdapter extends RecyclerView.Adapter<EmojiAdapter.EmojiHolder>
 
             itemView.setOnClickListener(view -> {
                 emojiGame.choose(card);
-                listener.cardClick();
             });
 
         }
     }
 
-    public interface Listener {
-        void cardClick();
-    }
 }

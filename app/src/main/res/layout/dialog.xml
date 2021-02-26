@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="@string/game_is_finished_you_won"
+        android:text="@string/game_over"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />

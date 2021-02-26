@@ -3,6 +3,7 @@ package com.makhabatusen.lesson_1.domain;
 import java.util.Objects;
 
 public class Card<Content> {
+
     private int id;
     private boolean isFaceUp;
     private boolean isMatched;

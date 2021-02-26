@@ -9,7 +9,6 @@ import java.util.List;
 public class Game<Content> {
 
     private final List<Card<Content>> cards = new ArrayList<>();
-    private Card<Content> card;
     private boolean isGameFinished = false;
 
 
@@ -36,7 +35,6 @@ public class Game<Content> {
         gameFinished();
     }
 
-
     private void gameFinished() {
         if (cards.isEmpty()) {
             setGameFinished(true);
@@ -44,7 +42,6 @@ public class Game<Content> {
     }
 
     private void checkPairs(Card<Content> card) {
-        this.card = card;
         for (Card<Content> anotherCard : cards) {
             if (card.isFaceUp() && anotherCard.isFaceUp()) {
                 if (card.equals(anotherCard)

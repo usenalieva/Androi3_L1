@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.makhabatusen.lesson_1.R;
 import com.makhabatusen.lesson_1.ui.adapter.EmojiAdapter;
 
-public class MainActivity extends AppCompatActivity implements EmojiAdapter.Listener {
-    private EmojiAdapter emojiAdapter;
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +19,8 @@ public class MainActivity extends AppCompatActivity implements EmojiAdapter.List
 
     private void init() {
         RecyclerView recyclerView = findViewById(R.id.rv_cards);
-        emojiAdapter = new EmojiAdapter(this, new EmojiGame(this));
+        EmojiAdapter emojiAdapter = new EmojiAdapter(new EmojiGame(this));
         recyclerView.setAdapter(emojiAdapter);
     }
 
-    @Override
-    public void cardClick() {
-      //  Log.e("ololo", String.valueOf(card.getId()));
-        emojiAdapter.notifyDataSetChanged();
-    }
 }
