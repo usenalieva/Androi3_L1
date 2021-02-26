@@ -60,6 +60,7 @@ public class EmojiAdapter extends RecyclerView.Adapter<EmojiAdapter.EmojiHolder>
 
             itemView.setOnClickListener(view -> {
                 emojiGame.choose(card);
+                notifyDataSetChanged();
             });
 
         }
