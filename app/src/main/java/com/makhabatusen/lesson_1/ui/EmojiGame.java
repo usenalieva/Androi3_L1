@@ -22,7 +22,7 @@ public class EmojiGame {
 
     public void choose(Card<String> card) {
         game.choose(card);
-        if (game.isGameFinished()) {
+        if (game.isGameOver()) {
             message();
         }
     }

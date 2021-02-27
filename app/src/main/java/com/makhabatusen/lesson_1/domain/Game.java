@@ -9,15 +9,15 @@ import java.util.List;
 public class Game<Content> {
 
     private final List<Card<Content>> cards = new ArrayList<>();
-    private boolean isGameFinished = false;
+    private boolean isGameOver = false;
 
 
-    public boolean isGameFinished() {
-        return isGameFinished;
+    public boolean isGameOver() {
+        return isGameOver;
     }
 
-    public void setGameFinished(boolean gameFinished) {
-        isGameFinished = gameFinished;
+    public void setGameOver(boolean gameOver) {
+        isGameOver = gameOver;
     }
 
     public Game(List<Content> contents) {
@@ -37,8 +37,9 @@ public class Game<Content> {
 
     private void gameFinished() {
         if (cards.isEmpty()) {
-            setGameFinished(true);
+            setGameOver(true);
         }
+
     }
 
     private void checkPairs(Card<Content> card) {
@@ -57,6 +58,7 @@ public class Game<Content> {
             }
         }
     }
+
 
     private void remove() {
         List<Card<Content>> resultCards = new ArrayList<>(cards);
